@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReportData" targetNamespace="http://tempuri.org/ReportData.xsd" xmlns:mstns="http://tempuri.org/ReportData.xsd" xmlns="http://tempuri.org/ReportData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ReportData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ReportData" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReportData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Division" msprop:Generator_RowEvHandlerName="DivisionRowChangeEventHandler" msprop:Generator_RowDeletedName="DivisionRowDeleted" msprop:Generator_RowDeletingName="DivisionRowDeleting" msprop:Generator_RowEvArgName="DivisionRowChangeEvent" msprop:Generator_TablePropName="Division" msprop:Generator_RowChangedName="DivisionRowChanged" msprop:Generator_UserTableName="Division" msprop:Generator_RowChangingName="DivisionRowChanging" msprop:Generator_RowClassName="DivisionRow" msprop:Generator_TableClassName="DivisionDataTable" msprop:Generator_TableVarName="tableDivision">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DivisionName" msprop:Generator_ColumnPropNameInTable="DivisionNameColumn" msprop:Generator_ColumnPropNameInRow="DivisionName" msprop:Generator_UserColumnName="DivisionName" msprop:Generator_ColumnVarNameInTable="columnDivisionName" type="xs:string" minOccurs="0" />
+              <xs:element name="ABG" msprop:Generator_ColumnPropNameInTable="ABGColumn" msprop:Generator_ColumnPropNameInRow="ABG" msprop:Generator_UserColumnName="ABG" msprop:Generator_ColumnVarNameInTable="columnABG" type="xs:string" minOccurs="0" />
+              <xs:element name="BGB" msprop:Generator_ColumnPropNameInTable="BGBColumn" msprop:Generator_ColumnPropNameInRow="BGB" msprop:Generator_UserColumnName="BGB" msprop:Generator_ColumnVarNameInTable="columnBGB" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalCarbon" msprop:Generator_ColumnPropNameInTable="TotalCarbonColumn" msprop:Generator_ColumnPropNameInRow="TotalCarbon" msprop:Generator_UserColumnName="TotalCarbon" msprop:Generator_ColumnVarNameInTable="columnTotalCarbon" type="xs:string" minOccurs="0" />
+              <xs:element name="Growingstock" msprop:Generator_ColumnPropNameInTable="GrowingstockColumn" msprop:Generator_ColumnPropNameInRow="Growingstock" msprop:Generator_UserColumnName="Growingstock" msprop:Generator_ColumnVarNameInTable="columnGrowingstock" type="xs:string" minOccurs="0" />
+              <xs:element name="Denseforest_volume" msprop:Generator_UserColumnName="Denseforest_volume" msprop:Generator_ColumnPropNameInTable="Denseforest_volumeColumn" msprop:Generator_ColumnPropNameInRow="Denseforest_volume" msprop:Generator_ColumnVarNameInTable="columnDenseforest_volume" type="xs:string" minOccurs="0" />
+              <xs:element name="Openforests_volume" msprop:Generator_UserColumnName="Openforests_volume" msprop:Generator_ColumnPropNameInTable="Openforests_volumeColumn" msprop:Generator_ColumnPropNameInRow="Openforests_volume" msprop:Generator_ColumnVarNameInTable="columnOpenforests_volume" type="xs:string" minOccurs="0" />
+              <xs:element name="Scrubland_volume" msprop:Generator_UserColumnName="Scrubland_volume" msprop:Generator_ColumnPropNameInTable="Scrubland_volumeColumn" msprop:Generator_ColumnPropNameInRow="Scrubland_volume" msprop:Generator_ColumnVarNameInTable="columnScrubland_volume" type="xs:string" minOccurs="0" />
+              <xs:element name="Non_Forestry_Plantation_volume" msprop:Generator_UserColumnName="Non_Forestry_Plantation_volume" msprop:Generator_ColumnPropNameInTable="Non_Forestry_Plantation_volumeColumn" msprop:Generator_ColumnPropNameInRow="Non_Forestry_Plantation_volume" msprop:Generator_ColumnVarNameInTable="columnNon_Forestry_Plantation_volume" type="xs:string" minOccurs="0" />
+              <xs:element name="Total_Volume" msprop:Generator_UserColumnName="Total_Volume" msprop:Generator_ColumnPropNameInTable="Total_VolumeColumn" msprop:Generator_ColumnPropNameInRow="Total_Volume" msprop:Generator_ColumnVarNameInTable="columnTotal_Volume" type="xs:string" minOccurs="0" />
+              <xs:element name="avg_per_ha_in_m3" msprop:Generator_UserColumnName="avg_per_ha_in_m3" msprop:Generator_ColumnPropNameInTable="avg_per_ha_in_m3Column" msprop:Generator_ColumnPropNameInRow="avg_per_ha_in_m3" msprop:Generator_ColumnVarNameInTable="columnavg_per_ha_in_m3" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ivi" msprop:Generator_RowEvHandlerName="iviRowChangeEventHandler" msprop:Generator_RowDeletedName="iviRowDeleted" msprop:Generator_RowDeletingName="iviRowDeleting" msprop:Generator_RowEvArgName="iviRowChangeEvent" msprop:Generator_TablePropName="ivi" msprop:Generator_RowChangedName="iviRowChanged" msprop:Generator_UserTableName="ivi" msprop:Generator_RowChangingName="iviRowChanging" msprop:Generator_RowClassName="iviRow" msprop:Generator_TableClassName="iviDataTable" msprop:Generator_TableVarName="tableivi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sc_name" msprop:Generator_ColumnPropNameInTable="sc_nameColumn" msprop:Generator_ColumnPropNameInRow="sc_name" msprop:Generator_UserColumnName="sc_name" msprop:Generator_ColumnVarNameInTable="columnsc_name" type="xs:string" minOccurs="0" />
+              <xs:element name="RangeName" msprop:Generator_ColumnPropNameInTable="RangeNameColumn" msprop:Generator_ColumnPropNameInRow="RangeName" msprop:Generator_UserColumnName="RangeName" msprop:Generator_ColumnVarNameInTable="columnRangeName" type="xs:string" minOccurs="0" />
+              <xs:element name="relative_freq_all" msprop:Generator_ColumnPropNameInTable="relative_freq_allColumn" msprop:Generator_ColumnPropNameInRow="relative_freq_all" msprop:Generator_UserColumnName="relative_freq_all" msprop:Generator_ColumnVarNameInTable="columnrelative_freq_all" type="xs:string" minOccurs="0" />
+              <xs:element name="basal_frequency_area" msprop:Generator_ColumnPropNameInTable="basal_frequency_areaColumn" msprop:Generator_ColumnPropNameInRow="basal_frequency_area" msprop:Generator_UserColumnName="basal_frequency_area" msprop:Generator_ColumnVarNameInTable="columnbasal_frequency_area" type="xs:string" minOccurs="0" />
+              <xs:element name="relative_density" msprop:Generator_ColumnPropNameInTable="relative_densityColumn" msprop:Generator_ColumnPropNameInRow="relative_density" msprop:Generator_UserColumnName="relative_density" msprop:Generator_ColumnVarNameInTable="columnrelative_density" type="xs:string" minOccurs="0" />
+              <xs:element name="IVIValue" msprop:Generator_ColumnPropNameInTable="IVIValueColumn" msprop:Generator_ColumnPropNameInRow="IVIValue" msprop:Generator_UserColumnName="IVIValue" msprop:Generator_ColumnVarNameInTable="columnIVIValue" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Range" msprop:Generator_RowEvHandlerName="RangeRowChangeEventHandler" msprop:Generator_RowDeletedName="RangeRowDeleted" msprop:Generator_RowDeletingName="RangeRowDeleting" msprop:Generator_RowEvArgName="RangeRowChangeEvent" msprop:Generator_TablePropName="Range" msprop:Generator_RowChangedName="RangeRowChanged" msprop:Generator_RowChangingName="RangeRowChanging" msprop:Generator_TableClassName="RangeDataTable" msprop:Generator_RowClassName="RangeRow" msprop:Generator_TableVarName="tableRange" msprop:Generator_UserTableName="Range">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DivisionName" msprop:Generator_ColumnPropNameInRow="DivisionName" msprop:Generator_ColumnPropNameInTable="DivisionNameColumn" msprop:Generator_ColumnVarNameInTable="columnDivisionName" msprop:Generator_UserColumnName="DivisionName" type="xs:string" minOccurs="0" />
+              <xs:element name="RangeName" msprop:Generator_ColumnPropNameInRow="RangeName" msprop:Generator_ColumnPropNameInTable="RangeNameColumn" msprop:Generator_ColumnVarNameInTable="columnRangeName" msprop:Generator_UserColumnName="RangeName" type="xs:string" minOccurs="0" />
+              <xs:element name="min_agb" msprop:Generator_ColumnPropNameInRow="min_agb" msprop:Generator_ColumnPropNameInTable="min_agbColumn" msprop:Generator_ColumnVarNameInTable="columnmin_agb" msprop:Generator_UserColumnName="min_agb" type="xs:string" minOccurs="0" />
+              <xs:element name="max_agb" msprop:Generator_ColumnPropNameInRow="max_agb" msprop:Generator_ColumnPropNameInTable="max_agbColumn" msprop:Generator_ColumnVarNameInTable="columnmax_agb" msprop:Generator_UserColumnName="max_agb" type="xs:string" minOccurs="0" />
+              <xs:element name="avg_agb" msprop:Generator_ColumnPropNameInRow="avg_agb" msprop:Generator_ColumnPropNameInTable="avg_agbColumn" msprop:Generator_ColumnVarNameInTable="columnavg_agb" msprop:Generator_UserColumnName="avg_agb" type="xs:string" minOccurs="0" />
+              <xs:element name="SD_agb" msprop:Generator_ColumnPropNameInRow="SD_agb" msprop:Generator_ColumnPropNameInTable="SD_agbColumn" msprop:Generator_ColumnVarNameInTable="columnSD_agb" msprop:Generator_UserColumnName="SD_agb" type="xs:string" minOccurs="0" />
+              <xs:element name="min_bgb" msprop:Generator_ColumnPropNameInRow="min_bgb" msprop:Generator_ColumnPropNameInTable="min_bgbColumn" msprop:Generator_ColumnVarNameInTable="columnmin_bgb" msprop:Generator_UserColumnName="min_bgb" type="xs:string" minOccurs="0" />
+              <xs:element name="max_bgb" msprop:Generator_ColumnPropNameInRow="max_bgb" msprop:Generator_ColumnPropNameInTable="max_bgbColumn" msprop:Generator_ColumnVarNameInTable="columnmax_bgb" msprop:Generator_UserColumnName="max_bgb" type="xs:string" minOccurs="0" />
+              <xs:element name="avg_bgb" msprop:Generator_ColumnPropNameInRow="avg_bgb" msprop:Generator_ColumnPropNameInTable="avg_bgbColumn" msprop:Generator_ColumnVarNameInTable="columnavg_bgb" msprop:Generator_UserColumnName="avg_bgb" type="xs:string" minOccurs="0" />
+              <xs:element name="SD_bgb" msprop:Generator_ColumnPropNameInRow="SD_bgb" msprop:Generator_ColumnPropNameInTable="SD_bgbColumn" msprop:Generator_ColumnVarNameInTable="columnSD_bgb" msprop:Generator_UserColumnName="SD_bgb" type="xs:string" minOccurs="0" />
+              <xs:element name="min_tc" msprop:Generator_ColumnPropNameInRow="min_tc" msprop:Generator_ColumnPropNameInTable="min_tcColumn" msprop:Generator_ColumnVarNameInTable="columnmin_tc" msprop:Generator_UserColumnName="min_tc" type="xs:string" minOccurs="0" />
+              <xs:element name="max_tc" msprop:Generator_ColumnPropNameInRow="max_tc" msprop:Generator_ColumnPropNameInTable="max_tcColumn" msprop:Generator_ColumnVarNameInTable="columnmax_tc" msprop:Generator_UserColumnName="max_tc" type="xs:string" minOccurs="0" />
+              <xs:element name="avg_tc" msprop:Generator_ColumnPropNameInRow="avg_tc" msprop:Generator_ColumnPropNameInTable="avg_tcColumn" msprop:Generator_ColumnVarNameInTable="columnavg_tc" msprop:Generator_UserColumnName="avg_tc" type="xs:string" minOccurs="0" />
+              <xs:element name="SD_tc" msprop:Generator_ColumnPropNameInRow="SD_tc" msprop:Generator_ColumnPropNameInTable="SD_tcColumn" msprop:Generator_ColumnVarNameInTable="columnSD_tc" msprop:Generator_UserColumnName="SD_tc" type="xs:string" minOccurs="0" />
+              <xs:element name="BlockName" msprop:Generator_ColumnPropNameInRow="BlockName" msprop:Generator_ColumnPropNameInTable="BlockNameColumn" msprop:Generator_ColumnVarNameInTable="columnBlockName" msprop:Generator_UserColumnName="BlockName" type="xs:string" minOccurs="0" />
+              <xs:element name="min_Growingstock" msprop:Generator_ColumnPropNameInRow="min_Growingstock" msprop:Generator_ColumnPropNameInTable="min_GrowingstockColumn" msprop:Generator_ColumnVarNameInTable="columnmin_Growingstock" msprop:Generator_UserColumnName="min_Growingstock" type="xs:string" minOccurs="0" />
+              <xs:element name="max_Growingstock" msprop:Generator_ColumnPropNameInRow="max_Growingstock" msprop:Generator_ColumnPropNameInTable="max_GrowingstockColumn" msprop:Generator_ColumnVarNameInTable="columnmax_Growingstock" msprop:Generator_UserColumnName="max_Growingstock" type="xs:string" minOccurs="0" />
+              <xs:element name="avg_Growingstock" msprop:Generator_ColumnPropNameInRow="avg_Growingstock" msprop:Generator_ColumnPropNameInTable="avg_GrowingstockColumn" msprop:Generator_ColumnVarNameInTable="columnavg_Growingstock" msprop:Generator_UserColumnName="avg_Growingstock" type="xs:string" minOccurs="0" />
+              <xs:element name="SD_Growingstock" msprop:Generator_ColumnPropNameInRow="SD_Growingstock" msprop:Generator_ColumnPropNameInTable="SD_GrowingstockColumn" msprop:Generator_ColumnVarNameInTable="columnSD_Growingstock" msprop:Generator_UserColumnName="SD_Growingstock" type="xs:string" minOccurs="0" />
+              <xs:element name="CompartmentName" msprop:Generator_ColumnPropNameInRow="CompartmentName" msprop:Generator_ColumnPropNameInTable="CompartmentNameColumn" msprop:Generator_ColumnVarNameInTable="columnCompartmentName" msprop:Generator_UserColumnName="CompartmentName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,251 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="VanUser.master.cs" Inherits="vansystem.VanUser" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="FES">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="vali/img/favicon.png" />
+    <title>Van - Upload Forest Admin Boundaries</title>
+    <link rel="stylesheet" type="text/css" href="vali/css/main.css">
+
+
+    <link rel="stylesheet" type="text/css" href="vali/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vali/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="vali/css/font-awesome-custom.css">
+    <link rel="stylesheet" type="text/css" href="vali/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="global/css/ol4.css">
+
+    <script src="vali/js/jquery-3.2.1.min.js"></script>
+    <link media="screen" rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+
+     <script>
+
+        //$('.datePicker').datepicker({
+        //    autoclose: true
+        //});
+
+        var url = window.location;
+        // for sidebar menu but not for treeview submenu
+        $('ul.app-menu a').filter(function () {
+            return this.href == url;
+        }).parent().siblings().removeClass('active').end().addClass('active');
+        // for treeview which is like a submenu
+        $('ul.treeview-menu a').filter(function () {
+            return this.href == url;
+        }).parentsUntil(".app-menu > .treeview-menu").siblings().removeClass('active menu-open').end().addClass('active menu-open');
+     </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="app sidebar-mini">
+    <form id="form1" runat="server">
+        <div>
+            <div id="loader">
+                <div class="sk-folding-cube">
+                    <div class="sk-cube1 sk-cube"></div>
+                    <div class="sk-cube2 sk-cube"></div>
+                    <div class="sk-cube4 sk-cube"></div>
+                    <div class="sk-cube3 sk-cube"></div>
+                    <em>Van</em>
+                </div>
+            </div>
+            <header class="app-header" style="background: #fff; border-bottom: 4px solid #004990;">
+                <a class="app-sidebar__toggle" href="#" data-toggle="sidebar"></a>
+                <a href="About.aspx">
+                    <img src="vali/img/van-logo.jpg" /></a>
+                <ul class="app-nav">
+                   
+                    <asp:Label ID="lblloginsucess" runat="server" Text=""></asp:Label>
+                    <li class="dropdown">
+                        <a class="app-nav__item" href="#" data-toggle="dropdown"><i class="fa fa-user fa-lg"></i></a>
+                        <ul class="dropdown-menu settings-menu dropdown-menu-right">
+                         
+                            <li>
+                                <a class="dropdown-item" href="About.aspx">
+                                    <i class="fa fa-address-book fa-lg"></i>My Account
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="LogoutPage.aspx">
+                                    <i class="fa fa-sign-in fa-lg"></i>Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </header>
+          
+            <aside class="app-sidebar">
+                <div class="app-sidebar__user">
+                   
+                    <span style="display: inline-block; border: 1px solid #fff; background: #36b439; padding: 4px 8px; border-radius: 30px; margin-right: 10px;"><i class="fa fa-user" style="font-size: 150%;"></i></span>
+                    <div>
+                      
+                    </div>
+                </div>
+                <ul class="app-menu">
+                    <li><a class="app-menu__item" href="About.aspx"><i class="app-menu__icon fa fa-info fa-fw"></i><span class="app-menu__label">About</span></a></li>
+                    <li><a class="app-menu__item" href="dashboard.aspx"><i class="app-menu__icon fa fa-dashboard fa-fw"></i><span class="app-menu__label">Dashboard</span></a></li>
+                    <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-upload fa-fw"></i><span class="app-menu__label">Data Upload</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a class="treeview-item" href="ForestAdminBoundaries.aspx"><i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Forest Admin Boundaries</a></li>
+                            <li><a class="treeview-item" href="speciesData.aspx"><i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Species Data</a></li>
+                            <li><a class="treeview-item" href="samplingPlots.aspx"><i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Sampling Plots</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li><a class="app-menu__item" href="verifyAdminBoundaries.aspx"><i class="app-menu__icon fa fa-map-o fa-fw"></i><span class="app-menu__label">Forest Boundaries</span><i class="treeview-indicator fa fa-angle-right"></i></a></li>
+                    <li class="treeview">
+                        <a class="app-menu__item" href="#" data-toggle="treeview">
+                            <i class="app-menu__icon fa fa-edit fa-fw"></i>
+                            <span class="app-menu__label">NWPC Forms</span>
+                            <i class="treeview-indicator fa fa-angle-right fa-fw"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a class="treeview-item" href="PlotApproach.aspx"><i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Plot Approach</a></li>
+                            <li><a class="treeview-item" href="PlotDescription.aspx"><i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Plot Description</a></li>
+                            <li><a class="treeview-item" href="PlotEnumeration.aspx"><i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Plot Enumeration</a></li>
+                            <li><a class="treeview-item" href="VillageLevelInformation.aspx"><i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Village Level Information</a></li>
+                            <li><a class="treeview-item" href="Household.aspx"><i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Household</a></li>
+                            <li><a class="treeview-item" href="TimberExtraction.aspx"><i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Timber Extraction</a></li>
+                            <li><a class="treeview-item" href="NTFPExtraction.aspx"><i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>NTFP extraction</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a class="app-menu__item" href="#" data-toggle="treeview">
+                            <i class="app-menu__icon fa fa-tasks fa-fw"></i>
+                            <span class="app-menu__label">Biodiversity Services</span>
+                            <i class="treeview-indicator fa fa-angle-right fa-fw"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a class="treeview-item" href="rareSpecies.aspx">
+                                    <i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Rare Species Information
+                                </a>
+                            </li>
+                     
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a class="app-menu__item" href="#" data-toggle="treeview">
+                            <i class="app-menu__icon fa fa-tasks fa-fw"></i>
+                            <span class="app-menu__label">Ecosystem Services</span>
+                            <i class="treeview-indicator fa fa-angle-right fa-fwt"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a class="treeview-item" href="ProvisioningServices.aspx">
+                                    <i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Provision Services
+                                </a>
+                            </li>
+                            <li>
+                                <a class="treeview-item" href="HydrologicalServices.aspx">
+                                    <i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Hydrological Services
+                                </a>
+                            </li>
+                            <li>
+                                <a class="treeview-item" href="CulturalServices.aspx">
+                                    <i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Cultural/Tourism Services
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a class="app-menu__item" href="#" data-toggle="treeview">
+                            <i class="app-menu__icon fa fa-file-text-o fa-fw"></i>
+                            <span class="app-menu__label">Reports</span>
+                            <i class="treeview-indicator fa fa-angle-right fa-fw"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a class="treeview-item" href="carbonemissionmain.aspx">
+                                    <i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Carbon Estimation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="treeview-item" href="GrowingStockmain.aspx">
+                                    <i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Growing Stock
+                                </a>
+                            </li>
+                            <li>
+                                <a class="treeview-item" href="Shannonmain.aspx">
+                                    <i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Shannon Diversity Index
+                                </a>
+                            </li>
+                            <li>
+                                <a class="treeview-item" href="Simpsonmain.aspx">
+                                    <i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Simpson Diversity Index
+                                </a>
+                            </li>
+                            <li>
+                                <a class="treeview-item" href="IVICal.aspx">
+                                    <i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Importance Value Index (IVI)
+                                </a>
+                            </li>
+                            <li>
+                                <a class="treeview-item" href="TabularReports.aspx">
+                                    <i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Tabular Reports
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </li>
+                    <li><a class="app-menu__item" href="getGISDashboard.aspx"><i class="app-menu__icon fa fa-globe fa-fw"></i><span class="app-menu__label">GIS Dashboard</span></a></li>
+                    <li class="treeview">
+                        <a class="app-menu__item" href="#" data-toggle="treeview">
+                            <i class="app-menu__icon fa fa-user fa-fw"></i>
+                            <span class="app-menu__label">User Management</span>
+                            <i class="treeview-indicator fa fa-angle-right fa-fw"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a class="treeview-item" href="getUsers.aspx"><i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Users</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a class="app-menu__item" href="#" data-toggle="treeview">
+                            <i class="app-menu__icon fa fa-download fa-fw"></i>
+                            <span class="app-menu__label">Working Plan</span>
+                            <i class="treeview-indicator fa fa-angle-right fa-fw"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a class="treeview-item" href="DraftVolume1.aspx">
+                                    <i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Draft Volume I
+                                </a>
+                            </li>
+                            <li>
+                                <a class="treeview-item" href="DraftVolume2.aspx">
+                                    <i class="icon fa fa-dot-circle-o fa-xxs fa-fw"></i>Draft Volume II
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <script src="vali/js/plugins/sweetalert.min.js"></script>
+           
+            <footer class="app-footer">
+                <div class="col-md-12 col-sm-12">
+                    <p class="text-center">Van System is based on the Integrated Forest Management Toolbox (IFMT) developed and Managed by &nbsp;<a href="https://www.gisfy.co.in/" target="_blank"><img src="vali/images/gisfyLogo.png" style="height: 30px;" /></a>.</p>
+                </div>
+            </footer>
+            <script type="text/javascript" src="vali/js/plugins/chart.js"></script>
+            <script src="vali/js/plugins/pace.min.js"></script>
+            <script src="vali/js/popper.min.js"></script>
+            <script src="vali/js/bootstrap.min.js"></script>
+            <script src="vali/js/main.js"></script>
+            <script src="vali/js/custom.js"></script>
+        </div>
+    </form>
+</body>
+</html>
